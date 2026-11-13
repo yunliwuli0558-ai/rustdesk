@@ -14,6 +14,7 @@ jobs:
     uses: ./.github/workflows/flutter-build.yml
     secrets: inherit
     with:
+      submodules: recursive
       upload-artifact: true
       upload-tag: ${{ github.ref_name }}
       publish-update-metadata: ${{ github.repository == 'rustdesk/rustdesk' }}
